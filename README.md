@@ -1,4 +1,4 @@
-# GROUP EIGHT <br/></n>
+# EEE B2 GROUP EIGHT <br/></n>
 GROUP MEMBERS: <br/>
     JOHN NJOROGE : ENE211-0230/2021<br/>
     BRAVIN AMANI : ENE211-<br/>
