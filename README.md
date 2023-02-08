@@ -1,1 +1,7 @@
-# group_8
+# GROUP EIGHT <br/></n>
+GROUP MEMBERS: <br/>
+    JOHN NJOROGE : ENE211-0230/2021<br/>
+    BRAVIN AMANI : ENE211-<br/>
+    Griffin Gutu  : ENE211-0174/2018<br/>
+    EZRA OANGI : ENE211-0044/2021<br/>
+    
