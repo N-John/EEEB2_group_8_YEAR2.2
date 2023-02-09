@@ -4,4 +4,5 @@ GROUP MEMBERS: <br/>
     BRAVIN AMANI : ENE211-<br/>
     Griffin Gutu  : ENE211-0174/2018<br/>
     EZRA OANGI : ENE211-0044/2021<br/>
+    VICTOR MUNYAO : ENE211-0050/2021<br/>
     
