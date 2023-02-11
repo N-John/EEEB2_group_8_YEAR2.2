@@ -17,6 +17,5 @@ int main()
         start++;
     }
     putchar('\n');
-    printf("ezra");
     return 0;
 }
