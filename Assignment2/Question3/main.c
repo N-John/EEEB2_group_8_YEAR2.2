@@ -1,11 +1,11 @@
 
 /*
 3. Write a program that prints the alphabet in lowercase, followed by a new line.
-    • Print all the letters except q and e
-    • You can only use the putchar function (every other function (printf, puts, etc…) is
+    ï¿½ Print all the letters except q and e
+    ï¿½ You can only use the putchar function (every other function (printf, puts, etcï¿½) is
     forbidden)
-    • All your code should be in the main function
-    • You can only use putchar twice in your code
+    ï¿½ All your code should be in the main function
+    ï¿½ You can only use putchar twice in your code
  The code below answers the question above
 */
 //Starting position
@@ -26,4 +26,5 @@ int main()
         }
 
    putchar('\n');
+   return 0;
 }
