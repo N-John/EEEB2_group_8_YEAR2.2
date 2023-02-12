@@ -18,7 +18,7 @@ int main()
         if (start=='q' || start =='e'){
             start++;
 
-            continue;
+
         }
 
         putchar(start);
