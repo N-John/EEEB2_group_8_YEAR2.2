@@ -53,7 +53,7 @@ int main()
         grade=10 ;
         strcpy(remark, "Distinction");
     }
-
+ // somebody debug from here
     printf("Name: %s\n", name);
     printf("Average marks: %.2f\n", avg);
     printf("Grade: %d\n", grade);
