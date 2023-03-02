@@ -53,21 +53,11 @@ int main()
         grade=10 ;
         strcpy(remark, "Distinction");
     }
- // somebody debug from here
+
     printf("Name: %s\n", name);
     printf("Average marks: %.2f\n", avg);
     printf("Grade: %d\n", grade);
-    printf( avg>= 0 && avg <= 1);
-    {
-        grade = 3;
-        strcpy(remark, "Credit");
-    }
-    else if
-    {
-        grade = 1;
-"Remark: %s\n", remark);
-grade=3
-strcpy(remark, "distinction")
+    printf( "remark: %s\n", remark);
 
     return 0;
 }
