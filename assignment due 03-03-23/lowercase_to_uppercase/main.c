@@ -1,6 +1,6 @@
 /*
   write a c program to read a lowercase character
-  and display its uppercase equivalent
+  and display its uppercase equivalenta
 
 */
 #include <ctype.h>

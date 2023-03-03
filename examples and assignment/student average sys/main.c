@@ -12,8 +12,7 @@ int main()
 
     //input
     printf("Enter your name :");
-    scanf("%s",&name);
-    printf("Your name is %s \n",name );
+    scanf(" your name is %s",&name);
     getch();
     printf("Enter your marks \n");
     printf("Science :");
@@ -26,7 +25,6 @@ int main()
     total=(science+math+english);
     printf("Average is %f \n",total/(float)3);
 
-    printf("End");
 
     return 0;
 }
