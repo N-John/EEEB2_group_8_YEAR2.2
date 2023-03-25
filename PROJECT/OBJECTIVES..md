@@ -1,6 +1,6 @@
-#OBJECTIVES
+# OBJECTIVES
 <hr>
-##FROM PROBLEM STATEMENT
+## FROM PROBLEM STATEMENT
 
 * Develop an expense tracker</br>
     - Write expenses</br>
