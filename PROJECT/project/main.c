@@ -40,6 +40,36 @@ void decrypt{
 
 }
 */
+//new
+/*
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+  FILE *fp;
+  char entry[1000];
+  time_t current_time;
+
+  // Open log file in append mode
+  fp = fopen("log.txt", "a");
+
+  // Get current time
+  time(&current_time);
+
+  // Prompt user for log entry
+  printf("Enter log entry: ");
+  fgets(entry, 1000, stdin);
+
+  // Write entry to log file
+  fprintf(fp, "%s - %s", asctime(localtime(&current_time)), entry);
+
+  // Close log file
+  fclose(fp);
+
+  return 0;
+}
+
+*/
 
 FILE *fp;
 
