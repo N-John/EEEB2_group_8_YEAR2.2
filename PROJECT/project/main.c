@@ -6,14 +6,14 @@ Develop an expense tracker
     Write expenses
     Log expense
     Statistic
-        Average spenditure/input
-        Max/min spenditure/input
+        Average expenditure/input
+        Max/min expenditure/input
 Advice on expenditure
     Thresholds setting
 Include features such as M-Pesa integration and the ability to record cash transactions manually
 
     Record entering manually (linked to no 1)
-    Mpesa intergrations unavaible
+    Mpesa integrations unavailable
 Ensure that the program is user-friendly and easy to use
 
     linked to number 1 and 2
