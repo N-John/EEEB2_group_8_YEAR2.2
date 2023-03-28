@@ -29,7 +29,8 @@ Pleasure the impact of the program on SMEs in terms of improved financial manage
 
 //THIS FILE OFFERS REFENCE TO VARIOUS FUNCTIONS NECESSARY
 
-//CHANGES ARE ALLOWED
+//CHANGES ARE
+/*
 void encrypt{
 
 
@@ -38,16 +39,44 @@ void decrypt{
 
 
 }
+*/
+
+FILE *fp;
+
+
+
 void  give_Advice(){
 
 
 }
+void create_file(){
+    fp = fopen("test.txt", "w+");
+    fprintf(fp, "This is testing for fprintf...\n");
+    fputs("This is testing for fputs...\n", fp);
+    fclose(fp);
 
+}
 void write_expenses{
+    fp = fopen("test.txt","w+");
+    fputs("This is a new line after editing\n", fp);
+    fclose(fp);
 
 
 }
 void get_expenses{
+
+    // Reading a file
+    char buff[255];
+    fp = fopen("test.txt", "r");
+    fscanf(fp, "%s", buff);
+    printf("1: %s\n", buff );
+
+    fgets(buff, 255, (FILE*)fp);
+    printf("2: %s\n", buff );
+
+    fgets(buff, 255, (FILE*)fp);
+    printf("3: %s\n", buff );
+    fclose(fp);
 
 
 }
