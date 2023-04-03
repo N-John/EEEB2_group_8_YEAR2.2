@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <time.h>
+
 /*
 Develop an expense tracker
 
@@ -27,7 +28,7 @@ Pleasure the impact of the program on SMEs in terms of improved financial manage
 
 
 
-//THIS FILE OFFERS REFENCE TO VARIOUS FUNCTIONS NECESSARY
+//THIS FILE OFFERS REFERENCE TO VARIOUS FUNCTIONS NECESSARY
 
 //CHANGES ARE
 /*
@@ -42,8 +43,6 @@ void decrypt{
 */
 //new
 /*
-#include <stdio.h>
-#include <time.h>
 
 int main() {
   FILE *fp;
@@ -115,8 +114,12 @@ void statistics{
 
 }
 
-int main(int argc,char args)
+int main(int argc,char* argv[])
 {
+    for (int i = 0; i < argc; i++) {
+        printf("%s\n", argv[i]);
+    }
+
     printf("Hello world!\n");
     return 0;
 }
