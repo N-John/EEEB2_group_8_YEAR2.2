@@ -6,7 +6,7 @@ Develop an expense tracker
 
     Write expenses --done
     Log expense --done
-    Statistic  
+    Statistic
         Average expenditure/input
         Max/min expenditure/input
 Advice on expenditure
@@ -60,7 +60,7 @@ void write_expenses(char * text){
     fp = fopen("test.txt","a");
     // Write entry to log file
     fprintf(fp, "%s%s", asctime(localtime(&current_time)), text);
-   
+
     //fputs(text, fp);
     fclose(fp);
 
@@ -91,25 +91,38 @@ void statistics(char * string){
    }
    return 0;
     //average
-    
+
     //max
     //min
 }
-int main(int argc,char* argv[])
+int main()
 {
-    for (int i = 0; i < argc; i++) {
-        printf("%s %d\n", argv[i],i);
-    }
-    printf("Hello world!\n");
+
+
+
     //case operator
     //deposit
-     printf("%s\n", argv[1]);
-    if (!strcmp(argv[1] , "deposit")){
-        text=strcat(argv[2]," Deposit \n");
+    int caser;
+    char amount;
+    while (1){
+
+    printf("1. Deposit Amount \n" );
+    printf("2. Spend Amount \n" );
+    printf("3. Log Expenses \n" );
+    printf("Write the number of action intended \n");
+
+    scanf("%d",&caser);
+    switch(caser){
+    case 1:{
+        printf("Amount :");
+        scanf("%s",&amount);
+        printf("amount :%s",amount);
+        text=strcat(amount," Deposit \n");
         printf("%s",text);
         write_expenses(text);
     }
     //spend
+    /*
     if (!strcmp(argv[1] , "spend")){
         text=strcat(argv[2]," Spend \n");
         printf("%s",text);
@@ -118,10 +131,11 @@ int main(int argc,char* argv[])
     //logs
     if (!strcmp(argv[1] , "log")){
         get_expenses();
-        
+    }
+    */
+    }
     }
 
-    
 
 
     printf("Hello world!\n");
