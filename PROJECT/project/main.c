@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <time.h>
-
+#include <string.h>
 /*
 Develop an expense tracker
 
-    Write expenses
-    Log expense
-    Statistic
+    Write expenses --done
+    Log expense --done
+    Statistic  
         Average expenditure/input
         Max/min expenditure/input
 Advice on expenditure
@@ -41,84 +41,88 @@ void decrypt{
 
 }
 */
-//new
-/*
 
-int main() {
-  FILE *fp;
-  char entry[1000];
-  time_t current_time;
 
-  // Open log file in append mode
-  fp = fopen("log.txt", "a");
-
-  // Get current time
-  time(&current_time);
-
-  // Prompt user for log entry
-  printf("Enter log entry: ");
-  fgets(entry, 1000, stdin);
-
-  // Write entry to log file
-  fprintf(fp, "%s - %s", asctime(localtime(&current_time)), entry);
-
-  // Close log file
-  fclose(fp);
-
-  return 0;
-}
-
-*/
 
 FILE *fp;
-
-
-
+char * text;
+float average_depo,average_spend,max_spend,min_spend,max_depo,min_depo;
 void  give_Advice(){
 
 
 }
-void create_file(){
-    fp = fopen("test.txt", "w+");
-    fprintf(fp, "This is testing for fprintf...\n");
-    fputs("This is testing for fputs...\n", fp);
+void write_expenses(char * text){
+    printf("here");
+      time_t current_time;
+
+    // Get current time
+    time(&current_time);
+    fp = fopen("test.txt","a");
+    // Write entry to log file
+    fprintf(fp, "%s%s", asctime(localtime(&current_time)), text);
+   
+    //fputs(text, fp);
     fclose(fp);
 
-}
-void write_expenses{
-    fp = fopen("test.txt","w+");
-    fputs("This is a new line after editing\n", fp);
-    fclose(fp);
-
 
 }
-void get_expenses{
-
+void get_expenses(){
+    //char log_out [10000000];
     // Reading a file
     char buff[255];
     fp = fopen("test.txt", "r");
-    fscanf(fp, "%s", buff);
-    printf("1: %s\n", buff );
 
-    fgets(buff, 255, (FILE*)fp);
-    printf("2: %s\n", buff );
 
-    fgets(buff, 255, (FILE*)fp);
-    printf("3: %s\n", buff );
+    // Read the content and print it
+    while(fgets(buff, 100, fp)) {
+    printf("%s", buff);
+    }
     fclose(fp);
 
 
 }
-void statistics{
-
-
+void statistics(char * string){
+    //get deposits and spends
+    char * token = strtok(string, " ");
+   // loop through the string to extract all other tokens
+   while( token != NULL ) {
+      printf( " %s\n", token ); //printing each token
+      token = strtok(NULL, " ");
+   }
+   return 0;
+    //average
+    
+    //max
+    //min
 }
-
 int main(int argc,char* argv[])
 {
     for (int i = 0; i < argc; i++) {
-        printf("%s\n", argv[i]);
+        printf("%s %d\n", argv[i],i);
     }
+    printf("Hello world!\n");
+    //case operator
+    //deposit
+     printf("%s\n", argv[1]);
+    if (!strcmp(argv[1] , "deposit")){
+        text=strcat(argv[2]," Deposit \n");
+        printf("%s",text);
+        write_expenses(text);
+    }
+    //spend
+    if (!strcmp(argv[1] , "spend")){
+        text=strcat(argv[2]," Spend \n");
+        printf("%s",text);
+        write_expenses(text);
+    }
+    //logs
+    if (!strcmp(argv[1] , "log")){
+        get_expenses();
+        
+    }
+
+    
+
 
     printf("Hello world!\n");
     return 0;
