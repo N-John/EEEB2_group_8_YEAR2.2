@@ -21,6 +21,7 @@ struct ExpenseTracker {
 };
 
 // CLASS TO ADD EXPENSES
+//griffin
 void addExpense(struct ExpenseTracker *tracker, int day, int month, int year, float amount, char *description) {
     if (tracker->numExpenses < MAX_EXPENSES) {
             //RELATE STRUCTURES
@@ -31,7 +32,7 @@ void addExpense(struct ExpenseTracker *tracker, int day, int month, int year, fl
         expense->amount = amount;
         strncpy(expense->description, description, sizeof(expense->description));
         tracker->numExpenses++;
-
+        //john
         if(save == 1){ //dont save during startup
             FILE *fp;
             fp = fopen("expenses.txt", "a"); //open file
@@ -46,6 +47,7 @@ void addExpense(struct ExpenseTracker *tracker, int day, int month, int year, fl
 }
 
 //class to calculate expenses
+//ezra
 float calculateTotalExpenses(struct ExpenseTracker *tracker, int month, int year) {
     float total = 0;
     for (int i = 0; i < tracker->numExpenses; i++) {
@@ -55,7 +57,7 @@ float calculateTotalExpenses(struct ExpenseTracker *tracker, int month, int year
     }
     return total;
 }
-
+//munyao
 void printMenu() {
     printf("Expense Tracker Menu\n");
     printf("1. Add Expense\n");
@@ -64,7 +66,7 @@ void printMenu() {
 }
 
 int main() {
-
+    //john
     struct ExpenseTracker tracker = {{0}, 0};
 
     // Load expenses from file
@@ -83,7 +85,7 @@ int main() {
     }
 
     save = 1;//enable saving
-
+    //munyao
     int choice;
     do {//init do loop
         printMenu(); // print the menu
@@ -91,6 +93,7 @@ int main() {
         scanf("%d", &choice);//scan to get the user choise
 
         switch (choice) {
+            //bravine
             case 1: // if user selects 'Add Expense'
                 printf("Add Expense\n");
 
@@ -115,7 +118,7 @@ int main() {
                 printf("\n");
 
                 break;
-
+            //bravine
             case 2: // if user selects 'Calculate Total Expenses'
                 printf("Calculate Total Expenses\n");
 
