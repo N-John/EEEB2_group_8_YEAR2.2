@@ -4,6 +4,8 @@
 
 #define MAX_EXPENSES 1000
 
+_Bool save = 0; // dont save in initial read
+
 //CREATE A STRUCTURE TO HOLD THE VARIABLES
 struct Expense {
     int day;
@@ -30,10 +32,14 @@ void addExpense(struct ExpenseTracker *tracker, int day, int month, int year, fl
         strncpy(expense->description, description, sizeof(expense->description));
         tracker->numExpenses++;
 
-        FILE *fp;
-        fp = fopen("expenses.txt", "a"); //open file
-        fprintf(fp, "%d/%d/%d,%.2f,%s\n", day, month, year, amount, description);//add a string to the file in the format "%d/%d/%d,%.2f,%s\n"
-        fclose(fp);//close the file
+        if(save == 1){ //dont save during startup
+            FILE *fp;
+            fp = fopen("expenses.txt", "a"); //open file
+            fprintf(fp, "%d/%d/%d,%.2f,%s\n", day, month, year, amount, description);//add a string to the file in the format "%d/%d/%d,%.2f,%s\n"
+            fclose(fp);//close the file
+        }
+
+
     } else {
         printf("Error: Maximum number of expenses reached\n");
     }
@@ -58,6 +64,7 @@ void printMenu() {
 }
 
 int main() {
+
     struct ExpenseTracker tracker = {{0}, 0};
 
     // Load expenses from file
@@ -74,6 +81,8 @@ int main() {
         }
         fclose(fp); // close file
     }
+
+    save = 1;//enable saving
 
     int choice;
     do {//init do loop
